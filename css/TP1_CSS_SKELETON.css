@@ -1,0 +1,330 @@
+@CHARSET "UTF-8";
+
+
+/* Menu bar Start */
+div.Bar {
+    overflow: hidden;
+    background-color: pink;
+}
+div.Bar button {
+    cursor: pointer;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color : white;
+}
+div.Bar button:hover{
+  background-color: yellow;
+}
+/* bar 버튼 호버*/
+div.Bar a{
+    text-decoration: none;
+    color: inherit;
+}
+/* bar의 전체 디자인과 버튼디자인*/
+
+.dropbtn {
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+		position: relative;
+    display: inline-block;
+}
+/* cusor를 pointer로 선언*/
+.dropbtn:hover, .dropbtn:focus {
+    background-color: inherit;
+}
+
+#dropimg{
+  width : 40px;
+  height : 20px;
+}
+/* 이미지 크기 선언*/
+.dropdown-content {
+    display: none;
+    position:  absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     left :500px;
+    top : 50px;
+
+    z-index: 1;
+}
+/* dropdown의 내용을 담은 박스의 디자인선언*/
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* dropdown의 글씨 디자인*/
+
+.show {display:block;
+animation: mymove 2s;}
+@keyframes mymove {
+    from {top: -200px; opacity: 0;}
+    to {top: 50px;opacity: 1;}
+}/*dropdown 박스가 생성되면 위에서 아래로 내려오는 애니메이션으로 구현*
+/
+/* Menu bar End */
+
+/* Main Start */
+/* image slider start*/
+div.ImageSlide {
+	background-image: url("image/background.gif");
+	outline : none;
+	width : 100%;
+  text-align:center;
+}/*이미지 슬라이더의 전체 배경화면을 gif로 선언*/
+.slider_wrapper{
+	overflow: hidden;
+	position:relative;
+	top:auto;
+}
+#image_slider{
+	position: relative;
+	height: auto;
+	list-style: none;
+	overflow: hidden;
+	float: left;
+	padding:0px;
+	margin:0px;
+}
+#image_slider div{
+	position: relative;
+	float: left;
+}/*이미지 슬라이더를 담당하고 있는 프레임으로  float로 옆으로 계속 쌓아주는 형식*/
+.nvgt{
+	position:absolute;
+	top: 120px;
+	height: 50px;
+	width: 30px;
+	opacity: 0.6;
+}
+.nvgt:hover{
+	opacity: 0.8;
+}/*좌우 방향버튼 위치와 hover 기능선언*/
+
+#prev{
+	left: 0px;
+	cursor: pointer;
+}
+#next{
+	right: 40px;
+	cursor: pointer;
+}/*좌우 방향버튼 위치 그리고 cusror기능선언*/
+
+.dot {
+	cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+	background-color: gray;
+}/*슬라이드 아래의 dot의 스타일 선언*/
+
+#d1{
+  background-color: lightblue;
+}/*첫번째 dot은 처음에 색깔이 있어야함으로 다르게 선언*/
+/* image slider end*/
+
+
+/*Introduce start start*/
+div.Introduce {
+	background-color : #white;
+	outline : none;
+	width : 100%;
+}
+.Introduce th {
+  color : #FF2965;
+  background-color:  #FBCEB1;
+}
+/*테이블헤더 스타일 선언*/
+.Introduce td{
+  width:50%;
+}/*테이블의 td크기를 전체의 50퍼로 선언*/
+
+#inttable{
+  width:60%;
+  margin-left:20%;
+  margin-right:20%;
+}
+#inttable table, #inttable  th,#inttable  td {
+	border: 1px solid black;
+}/*chart의 양옆 margin과 chart내 border 스타일 선언*/
+#myChart{
+	width: 100%;
+}
+#_preview_result_video{
+	width: 100%;
+	height: 300px;
+}/*유튜브 동영상 크기 설정*/
+#art{
+  color: #FF2965;
+  font-size: 40;
+	font-style: oblique;
+}/*Twice 폰트스타일 변경*/
+#fan{
+	text-decoration: underline;
+	font-style: italic;
+	color: #FBCEB1;
+}/*Once 폰트스타일 변경*/
+
+#foottb{
+  text-align: center;
+}
+tfoot{
+  background-color: #FE344C;
+}/*tfoot의 그림을 중앙정렬하고 같은색으로 배경색으로 하였다.*/
+
+/*Introduce end*/
+
+/*Gallery start*/
+div.Gallery {
+ background-color : white;
+ outline : none;
+ width : 100%;
+}
+.column {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 33%;
+}/*이미지 담을 공간을 column으로 담당하게하였다 한줄에 3개씩 나타나도록 폭은 33%로 설정했다*/
+.column .tooltiptext {
+	  visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: relative;
+    top:150px;
+    left:10px;
+    z-index: 1;
+}/*그림위에 나타날 텍스트 스타일을 선언하였다 처음에는 hidden이다*/
+.column:hover .tooltiptext {
+    visibility: visible;
+}/*마우스를 그림에 올리면 텍스트가 나타난다.*/
+.galleryimg{
+    position: relative;
+  width: 95%
+}/*그림간 여백을 조금 주기위해 100퍼가아닌 95퍼로 선언하였다*/
+
+.delete {position:relative;
+  cursor: pointer;
+  top:40px;
+  left:0px;
+  z-index: 1;
+  background-color: white
+}/*삭제 버튼의 스타일이다.*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}/*modal창의 전체적 디자인이다.*/
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}/*modal창 안의 이미지 프레임디자인이다.*/
+
+.myMSlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}/*모달창내에 좌우 버튼의 디자인이다.*/
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}/*모달창내에 좌우 버튼 hover시 색변화이다.*/
+
+/*Gallery end*/
+
+/*Guestbook start*/
+div.Guestbook {
+	background-color : #white;
+	outline : none;
+	width : 100%;
+}
+
+.writ{
+	width : 30%;
+}
+.tb table, .tb th, .tb td {
+	border: none;
+}/*테이블이 깔끔하게 보이도록 border를 없게했다.*/
+#boook{
+  font-size:30px;
+  text-align: center;
+  color: hotpink;
+  background-color: gray;
+}
+.celler{
+	text-align: right;
+}/*작성자 내용이 있는 테이블은 오른쪽으로 붙여 글씨처럼 느끼도록 함*/
+#tbl{width : 100%;
+}/*글이 작성되는 크기는 화면최대로*/
+#blank{
+	width: 80%;
+}
+#repleycontent{
+ width: 100%
+}/*테이블들의 넓이를 화면크기에 reponsive하게 나타나도록함*/
+
+/*Guestbook end*/
+/* Main End */
+
+/* Footer Start */
+footer {
+	background-color:#FBCEB1;
+	text-align: center;
+}/*footer의 배경과 정렬 선언*/
+#ID{
+	color:red;
+	text-decoration:overline;
+}
+#school{
+	color: gray;
+	text-decoration: underline;
+}/*소속과 학번에 font스타일 변경*/
+/* Footer End */

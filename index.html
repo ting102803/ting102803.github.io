@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Twice Introduction</title>
+	<meta property="og:title" content="Twice ntroduction" />
+	<meta property="og:image" content="http://blogpfthumb.phinf.naver.net/MjAxNzAzMTJfMTk4/MDAxNDg5MzA5MDk4Mzc4.wKDzjJYl8vawo9M5fwyRvXAd6c5fY-p68HZfxelt5H4g.3LSU1g-7fndOCh87uPvUXb67FYx6Z3GNQJD9Gww4uZgg.GIF.ting102803/160107_15.gif?type=f204_204" />
+	<meta property="og:description" content="Twice" />
+	<meta property="og:url" content="http://blog.naver.com/ting102803" />
+	<link rel="stylesheet" type="text/css" href="./css/TP1_CSS_SKELETON.css">
+	<script  type="text/javascript"src="js\jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js\tpjs.js"></script>
+	<script  type="text/javascript"src="js\Chart.js"></script>
+
+</head>
+<body>
+
+	<header>
+		<!--Menu bar start-->
+		<div class="Bar"><a name="Bar"></a>
+			<a href="#Bar"><button class="Menu">HOME</button></a>
+			<a href="#silde"><button class="Menu">IMAGE SLIDE</button></a>
+			<a href="#intro"><button class="Menu">INTRODUCE</button></a>
+			<a href="#gall"><button class="Menu">GALLERY</button></a>
+			<a href="#guest"><button class="Menu">GUEST BOOK</button></a><!--각각의 버튼에 링크를 걸어서 해당  이름이 있는곳으로 가게 설정-->
+			<div><button onclick="Drop()" class="dropbtn"><img src="js/img/nomal.png" id="dropimg"></button>
+  				<div id="myDropdown" class="dropdown-content">
+			    		<a href="#Bar">Home</a>
+			    		<a href="#silde">IMAGE SLIDE</a>
+			    		<a href="#intro">INTRODUCE</a>
+							<a href="#gall">GALLERY</a>
+			    		<a href="#guest">GUEST BOOK</a><!--Dropdwon구현 클릭시 자바스크립트 실행-->
+			  	</div>
+					</div>
+		</div>
+		<!--Menu bar end-->
+	</header>
+
+
+
+	<main>
+		<!--image slider  start-->
+		<div class = "ImageSlide"  ><a name="silde"></a>
+
+			<div class="slider_wrapper">
+				<div id="image_slider" width =100%>
+						<div class="mySlides fade"><img src="img\image\1.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\2.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\3.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\4.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\5.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\6.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\7.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\8.jpg"></div>
+						<div class="mySlides fade"><img src="img\image\9.jpg"></div>
+				</div><!--필요한 이미지 삽입-->
+					<span class="nvgt" id="prev"><img src="img\slide_button\left.gif" ></span>
+					<span class="nvgt" id="next"><img src="img\slide_button\right.gif"></span>
+			</div><!--button image 삽입-->
+			<br>
+			<div >
+				  <span class="dot" id="d1"onclick="slideTo(0) "onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+				  <span class="dot" onclick="slideTo(1)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+				 	<span class="dot" onclick="slideTo(2)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+					<span class="dot" onclick="slideTo(3)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+					<span class="dot" onclick="slideTo(4)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+					<span class="dot" onclick="slideTo(5)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+					<span class="dot" onclick="slideTo(6)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+					<span class="dot" onclick="slideTo(7)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+					<span class="dot" onclick="slideTo(8)"onmouseover="onImg(this)" onmouseout="outImg(this)"></span>
+		</div><!--dotbutton 삽입-->
+</div>
+<!--image slider  end-->
+
+
+
+<!--Introduce start-->
+<div class="Introduce"><a name="intro"></a>
+			<table id="inttable"  >
+					    <thead>
+							   		 <tr>
+							           <th colspan="2"><h1>트와이스 미니 4집앨범 예판특전안내</h1> </th>
+							        </tr>
+							</thead>
+			<tbody>
+			       			 <tr>
+			          				<td rowspan="2" ><canvas id="myChart" ></canvas></td>
+												<td ><!--chart와 동영상 소개글 삽입-->
+															<p><br><iframe id="_preview_result_video" src="http://www.youtube.com/embed/gCCxjhihsoA" ></iframe></p>
+														  <p>2016걸그룹부문 앨범 판매량 압도적 1위! </p>
+															<p> 대한민국 최고의 걸그룹 <span id = "art">Twice</span></p>
+															<p>2017년 5월 16일 미니 4집으로 Twice가 컴백합니다</p>
+															<p>지금 구매해서 <span id ="fan">ONCE</span>가 되세요.</p>
+															<a href="http://music.aladin.co.kr/shop/wproduct.aspx?ItemId=108699337">구매하러가기</a>
+											</td>
+			        	</tr>
+								<tr>
+										 <td id = "introtext">
+												<p>구성품 : 앨범(A,B,C버전 중 하나),포토카드 1장<br>스폐셜 포토카드 1장,포스터 1장</p>
+												<p>예판시 포토카트 9장과 특별포스터를 1장 더 드립니다.</p>
+										</td>
+							</tr>
+			 </tbody>
+				<tfoot>
+					        <tr><!--fotter Link를 image로 사용-->
+					            <td colspan="2" id ="foottb"><a href="http://twice.jype.com/" ><img src="img\image\mark.png" id="mark" ></a>
+					        </tr>
+			 </tfoot>
+		</table>
+</div>
+<!--Introduce   end-->
+<!--Gallery Start-->
+<div class = "Gallery"><a name="gall"></a>
+	<div class="column">
+			<button class = "delete" onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">나연</span>
+			<img src="img\galleryimg\Nayean.jpg"  onclick="openModal();modalcurrentSlide(1)" class="galleryimg" onmouseover = "hovergall(this)" onmouseout="outgall(this)">
+	</div>
+	<div class="column">
+			<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">정연</span>
+			<img src="img\galleryimg\JungYean.jpg"  onclick="openModal();modalcurrentSlide(2)" class="galleryimg"onmouseover = "hovergall(this)" onmouseout="outgall(this)">
+	</div>
+  <div class="column">
+			<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">모모</span>
+    	<img src="img\galleryimg\Momo.jpg"  onclick="openModal();modalcurrentSlide(3)" class="galleryimg"onmouseover = "hovergall(this)" onmouseout="outgall(this)">
+  </div>
+	<div class="column">
+			<button class = "delete" onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">사나</span>
+			<img src="img\galleryimg\Sana.jpg"  onclick="openModal();modalcurrentSlide(4)" class="galleryimg"onmouseover = "hovergall(this)"onmouseout="outgall(this)">
+	</div>
+	<div class="column">
+			<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">지효</span>
+			<img src="img\galleryimg\Jihyo.jpg"  onclick="openModal();modalcurrentSlide(5)" class="galleryimg"onmouseover = "hovergall(this)"onmouseout="outgall(this)">
+	</div>
+	<div class="column">
+			<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">미나</span>
+			<img src="img\galleryimg\Mina.jpg"  onclick="openModal();modalcurrentSlide(6)" class="galleryimg"onmouseover = "hovergall(this)"onmouseout="outgall(this)">
+	</div>
+	<div class="column">
+			<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">다현</span>
+			<img src="img\galleryimg\Dahyen.jpg"  onclick="openModal();modalcurrentSlide(7)" class="galleryimg"onmouseover = "hovergall(this)"onmouseout="outgall(this)">
+	</div>
+	<div class="column">
+			<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+			<span class="tooltiptext">채영</span>
+			<img src="img\galleryimg\Chaeyoung.jpg"  onclick="openModal();modalcurrentSlide(8)" class="galleryimg"onmouseover = "hovergall(this)"onmouseout="outgall(this)">
+	</div>
+	<div class="column">
+		<button class = "delete"  onclick="imgblock(this)"><img src="img\galleryimg\X.jpg" ></button>
+		<span class="tooltiptext">쯔위</span>
+		<img src="img\galleryimg\Tzuyu.jpg" onclick="openModal();modalcurrentSlide(9)" class="galleryimg"onmouseover = "hovergall(this)"onmouseout="outgall(this)">
+	</div>
+<!--각각의 이미지에 delete 버튼을 주고 각각을 클릭했을때  함수 사용-->
+
+
+<button onclick="reset()">리셋</button>
+<!--localStorage 초기화를 위한 버튼생성-->
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content"><!--이미지 클릭시 모달창 구현을위해 선언-->
+    <div class="myMSlides">
+        <img src="img\galleryimg\Nayean.jpg"  onclick="closeModal()" style="width:100%">
+    </div>
+    <div class="myMSlides">
+        <img src="img\galleryimg\Jungyean.jpg" onclick="closeModal()" style="width:100%">
+    </div>
+    <div class="myMSlides">
+        <img src="img\galleryimg\Momo.jpg"onclick="closeModal()"  style="width:100%">
+    </div>
+		<div class="myMSlides">
+				<img src="img\galleryimg\Sana.jpg" onclick="closeModal()" style="width:100%">
+		</div>
+    <div class="myMSlides">
+        <img src="img\galleryimg\Jihyo.jpg"onclick="closeModal()"  style="width:100%">
+    </div>
+		<div class="myMSlides">
+        <img src="img\galleryimg\Mina.jpg" onclick="closeModal()" style="width:100%">
+    </div>
+		<div class="myMSlides">
+        <img src="img\galleryimg\Dahyen.jpg" onclick="closeModal()" style="width:100%">
+    </div>
+		<div class="myMSlides">
+        <img src="img\galleryimg\Chaeyoung.jpg" onclick="closeModal()" style="width:100%">
+    </div>
+		<div class="myMSlides">
+        <img src="img\galleryimg\Tzuyu.jpg" onclick="closeModal()" style="width:100%">
+    </div>
+<!--모달창의 이미지를 클릭할경우 종료되도록 onclick함수 추가-->
+    <a class="prev" onclick="plusSlides(-1)"><img src="img\modal_button\left.PNG" ></a>
+    <a class="next" onclick="plusSlides(1)"><img src="img\modal_button\right.PNG" ></a>
+<!--양옆으로 한칸씩 이동하는 버튼 추가-->
+  </div>
+</div>
+</div>
+<!--Gallery end-->
+<!--guest start-->
+<div class = "Guestbook" ><a name="guest"></a>
+		<div class="tb">
+				<form name='frm'>
+						<table  id='tbl'>
+								<tr id="tbob">
+										<td class="writ"></td>
+										<td></td><!--방명록 글을 추가할 테이블이다 처음에는 보이지않도록 만들어야한다.-->
+								</tr>
+						</table>
+					  <table  id='repleycontent'>
+							<tr>
+								<td  id='boook' colspan='2'>방명록 작성하기</td>
+							</tr>
+					      <tr>
+					           <td class="celler" >작성자</td>
+											<td><input type='text' name='writter' class="writ"></td>
+					       </tr>
+					        <tr>
+					             <td class="celler">내용</td>
+												<td ><input type='text' name='comments' id='blank'></td>
+					        </tr>
+					         <tr>
+					              <td  align='center' colspan='2'>
+					                  <input type='button' value='추가' onclick='fncAddRow()'>
+					              </td><!--작성자와 내용을 적는 테이블이다-->
+	            		</tr>
+	       		</table>
+				</div>
+		</form>
+</div>
+
+<script>
+
+</script>
+<!--guest End-->
+<!--Main  End-->
+</main>
+<footer>
+		<p>Post by <span id="school">충남대학교 컴퓨터 공학과</span>,<span id = "ID">201302423</span>,신종욱,ting102803@naver.com</p>
+</footer>
+</body>
+
+</html>
