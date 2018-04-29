@@ -151,6 +151,10 @@ div.Introduce {
   width:50%;
 }/*테이블의 td크기를 전체의 50퍼로 선언*/
 
+.video-container { margin: 0;padding-bottom: 75%; max-width: 100%; height: 0;  position: relative;overflow: hidden;} 
+.video-container iframe, 
+.video-container object, 
+.video-container embed { margin: 0;padding: 0;  width: 100%; height: 95%;position: absolute; top: 0;left: 0; }
 #inttable{
   width:60%;
   margin-left:20%;
