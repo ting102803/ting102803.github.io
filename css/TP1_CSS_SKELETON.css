@@ -5,6 +5,9 @@
 div.Bar {
     overflow: hidden;
     background-color: pink;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 div.Bar button {
     cursor: pointer;
